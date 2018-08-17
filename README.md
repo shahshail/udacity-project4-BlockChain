@@ -2,6 +2,7 @@
 Simple BlockChain implementation in Javascript that link togather in a chain of dataset and persist chain data with LevelDB. 
 
 ### Block Data Model
+```javascript
 {
    "hash": "",
    "height": 0,
@@ -11,4 +12,4 @@ Simple BlockChain implementation in Javascript that link togather in a chain of 
    "time": 0,
    "previousblockhash": ""
  }
-
+```
