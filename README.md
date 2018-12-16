@@ -63,5 +63,6 @@ example:
 example:
 
 ```
-curl -X "POST" "http://localhost:8080/block" -H 'Content-Type: application/json' -d $'{"body":"block body contents"}'
+shahshail (master #) Project3 $  curl http://localhost:8000/block/0
+{"hash":"60356324d21eb7185da1ba829619963fcdaa2a7963d82056198d786364be3696","height":0,"body":"Genesis block","time":"1544843681","previousBlockHash":""}
 ```
