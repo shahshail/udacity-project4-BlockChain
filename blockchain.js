@@ -1,21 +1,8 @@
 /* ===== SHA256 with Crypto-js ===============================*/
 
 const SHA256 = require('crypto-js/sha256');
-
+const Block = require('./block')
 const db = require('level')('./chaindata')
-/* ===== Block Class ==============================
-|  Class with a constructor for block 			   |
-|  ===============================================*/
-
-class Block{
-	constructor(data){
-     this.hash = "",
-     this.height = 0,
-     this.body = data,
-     this.time = 0,
-     this.previousBlockHash = ""
-    }
-}
 
 /* ===== Blockchain Class ==========================
 |  Class with a constructor for new blockchain 		|
@@ -183,3 +170,4 @@ let blockchain = new Blockchain();
 })(10);
 
 setTimeout(() => blockchain.validateChain(), 2000)
+module.exports = Blockchain
