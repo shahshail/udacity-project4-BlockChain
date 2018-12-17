@@ -46,7 +46,7 @@ Or run the server:
 node index.js
 ```
 
-Use a software like postman or a simple CURL on the terminal to send the requests to the base url http://localhost:8080 with one of the below supported endpoints:
+Use a software like postman or a simple CURL on the terminal to send the requests to the base url http://localhost:8000 with one of the below supported endpoints:
 
 - GET
 /block/{BLOCK_HEIGHT}
@@ -54,7 +54,7 @@ Use a software like postman or a simple CURL on the terminal to send the request
 example:
 
 ```
- curl http://localhost:8080/block/0
+ curl http://localhost:8000/block/0
 ```
 
 - POST

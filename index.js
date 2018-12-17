@@ -8,7 +8,7 @@ const Block = require('./block')
 const Blockchain = require('./blockchain')
 const chain = new Blockchain()
 
-app.listen(8080, () => console.log('Listening on port 8080'))
+app.listen(8000, () => console.log('Listening on port 8000'))
 app.use(bodyParser.json())
 app.get('/', (req, res) => res.status(404).json({
   "status": 404,
@@ -37,8 +37,9 @@ app.post('/block', async (req, res) => {
   if (req.body.body === '' || req.body.body === undefined) {
     res.status(400).json({
       "status": 400,
-      message: "Fill the body parameter"
+      message: "An error occurred, Please check your Body."
     })
+    return
   }
 
   await chain.addBlock(new Block(req.body.body))
